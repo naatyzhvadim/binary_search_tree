@@ -13,8 +13,6 @@ public class BinaryTree<T> {
 
     private Node tree = null;
     public void add(T element){
-        Node node = ;
-        while
     }
 
     public static void main(String[] args){
