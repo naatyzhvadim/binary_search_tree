@@ -36,14 +36,11 @@ public class BinaryTree<T> {
 
     Node recursiveFind(Node node, int key){
         if (node == null || node.key == key){
-            System.out.println(key);
             return node;
         }
         if (key < node.key){
-            System.out.print("LEFT ");
             return recursiveFind(node.left, key);
         }else{
-            System.out.print("RIGHT ");
             return recursiveFind(node.right, key);
         }
     }
@@ -85,7 +82,7 @@ public class BinaryTree<T> {
         return right;
     }
 
-    Node balance(Node node){
+    private Node balance(Node node){
         updateHeight(node);
         if (getBalance(node) == 2){
             if (getBalance(node.right) < 0){
